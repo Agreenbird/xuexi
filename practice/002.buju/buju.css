@@ -1,0 +1,114 @@
+/*.row{
+	font-size: 0;
+	color: #fff;
+}
+.col{
+	display: inline-block;
+	font-size: 16px;
+	
+	vertical-align: top;
+}
+
+.nav{
+	background: #444;
+}
+
+.nav .left{
+	width: 60%;
+}
+.nav .right{
+	width: 40%;
+	text-align: right;
+}
+
+.nav .item{
+	display: inline-block;
+	text-decoration: none;
+	padding: 18px 20px;
+	color: rgba(255,255,255,.8);
+}
+
+.nav .item:hover
+	background: rgba(0,0,0,0.2);
+	color: rgba(255,255,255,1);
+}
+*/
+
+/*.sidebar, .sidebar-item{
+	display: block;
+}
+
+.sidebar-item{
+	padding: 15px;
+	text-decoration: none;
+	color: rgba(255,255,255,.8);
+	
+}
+
+.sidebar{
+	width: 30%;
+	background: #444;
+}
+
+.sidebar-item:hover{
+	background: rgba(0,0,0,.2);
+	color: rgba(255,255,255,1);
+}
+
+*/
+
+/*.col{
+	display: block;
+	font-size: 16px;
+
+}
+.row{
+	font-size: 0px;
+}
+.card{
+	background: #fff;
+}
+
+.card > *{
+	padding: 10px;
+}
+
+.card .footer,
+.card .header{
+	background: #a10;
+	color: #fff;
+}*/
+
+/*.row{
+	font-size: 0px;
+	color: #fff;
+}
+.col{
+	font-size: 20px;
+	display: inline-block;
+}
+.nav{
+	background: #444;
+}
+.nav .left{
+	width: 70%;
+}
+.nav .right{
+	width: 30%;
+	text-align: right;
+}
+.nav .item{
+	text-decoration: none;
+	padding: 18px 20px;
+	display: inline-block;
+	color: rgba(255,255,255,.8);
+}*/
+
+.nav{
+	color: 
+}
+.nav .item{
+	display: inline-block;
+	text-decoration: none;
+	
+}

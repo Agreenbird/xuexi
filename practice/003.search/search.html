@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>search</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form>
+		<input type="search" name="" >
+		<button id="btn">搜索</button>
+	</form>
+
+<script type="text/javascript">
+var btn = document.querySelector('form');
+var input = document.querySelector('input');
+var keyword;
+
+btn.addEventListener('submit',function(e){
+	e.preventDefault();
+	keyword = input.value;
+	console.log(keyword);
+})
+
+</script>
+</body>
+</html>

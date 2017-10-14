@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	text-align: center;
+	box-sizing: border-box;
+	
+}
+	#btn{
+		width: 80px;
+		height: 40px;
+		
+		border-radius: 4px;
+		border-bottom: 2px solid rgb(56, 186, 114);
+		text-shadow: 0px 1px 1px #ffffffS;
+		background-color: rgb(56, 186, 114);
+		color: rgba(255,255,255,0.8);
+		font-size: 20px;
+		
+	}
+
+	
+	input {
+		width: 250px;
+		height: 40px;
+		line-height: 1.1;
+		margin-top: 20px;
+		border-radius: 5px;
+		border:1px solid #222222;
+		font-size: 20px;
+		background: #F5F5F5;
+
+		
+	}
+	#card-list{
+		width：900px;
+		height:900px;
+		margin:30px;
+		background: #F7F7F7;
+		font-size: 25px;
+	}
+	div{
+		height:50px;
+		background-color: #ECF1F4;
+		margin-top: 10px;
+
+	}
+	h4{
+		display: inline;
+	}
+	
