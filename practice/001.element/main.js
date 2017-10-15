@@ -10,7 +10,7 @@
     result = [];                  
     for (var i = 0; i < user_list.length; i++) {
       var user = user_list[i];
-      //indecOf方法更好一些
+      //indexOf方法更好一些
       if (user.name.indexOf(keyword) != -1) {
         result.push(user);
       }
