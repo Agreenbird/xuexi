@@ -2,10 +2,42 @@
 <html>
 <head>
 	<title>too-list</title>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 </head>
 <body>
-<script src="storage.js"></script>
-<script src="main.js"></script>
+<div>
+	<div id="input-form">
+		<form id="todo-form">
+			<input type="text" name="input-aqi" id="input-aqi">
+			<button id="btn">添加</button>
+		</form>
+	</div>
+
+	<div id="task-list" >
+		<div id="todo-list">
+			<ol id="el-todo-list">
+
+
+			</ol>
+			
+		</div>
+
+		<div id="del-list">
+			<ol id="el-del-list">
+
+
+			</ol>
+			
+		</div>
+	</div>
+</div>
+</form>
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ui.js"></script>
 
 </body>
 </html>

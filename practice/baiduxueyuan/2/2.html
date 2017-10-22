@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h3>污染城市列表</h3>
+<ul id="aqi-list">
+
+</ul>
+<script type="text/javascript">
+var aqiData = [
+
+	["北京",90],
+	["上海",50],
+	["福州",10],
+	["广州",50],
+	["成都",90],
+	["西安",100],
+
+];
+// (function(){
+// 	var result = [];
+// 	var se_data ;
+// 	function bijiao(aqiDate){
+// 		for (var i = 0; i < aqiData.length; i++) {
+// 			if(aqiData[i][1] > 60){
+// 				se_data = {"城市":aqiData[1][i],"质量":aqiData[i][1]};
+// 				result.push(se_data);
+// 				Console.log(result);
+// 			};
+			
+// 		};
+
+// 	}
+// 	var con = document.querySelector("#aqi-list");
+// 	function render (result){
+// 		for (var i = 0; i < result.length; i++) {
+// 			var el = document.createElement("li");
+// 			el.innerHTML = "城市:" + result[0][i] + "质量" + result[i][1];
+// 			con.appendChild(el);
+// 		}
+// 	}
+
+// })();
+
+(function () {
+	var cont = document.querySelector("#aqi-list");
+	//找出空气质量大于60的城市
+	var list = aqiData.filter(function(item){
+		return item[1] > 60;
+	});
+	//排序
+	list.sort(function(a,b){
+		return b[1] - a[1]
+	});
+	//迭代渲染
+	list.forEach(function(item,index,arry){
+		var newnode = document.createElement("li");
+		newnode.innerHTML = arry[0] + "+" + arry[1];
+		cont.appendChild(newnode);
+	});
+
+
+})();
+
+
+
+
+</script>
+</body>
+</html>
