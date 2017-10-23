@@ -76,7 +76,7 @@
     var list = b.read();
     list.forEach(function(article){
       var del_btn,updata_btn;
-      var el_list = document.createElement("div");
+      var el_list = document.createElement("div")
       el_list.classList.add('article-item');
 
       el_list.innerHTML = `

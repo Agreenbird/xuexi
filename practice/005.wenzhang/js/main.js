@@ -14,6 +14,7 @@
 	};
 
 	
+
 	init_data();
 	function init_data(){
 		article_list = s.get("article_list");
