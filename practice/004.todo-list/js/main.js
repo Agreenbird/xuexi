@@ -8,8 +8,9 @@
 		last_id: last_id,
 		add: add,
 		del: del,
-		updata: updata,
-		read: read
+		update: update,
+		read: read,
+		sync:sync
 	};
 	init_data();
 
@@ -45,10 +46,10 @@
 	}
 	function del(id){
 		var find_id = find_index(id);
-		task_list.spilce(find_id,1);
+		task_list.splice(find_id,1);
 		sync();
 	}
-	function updata(id,title){
+	function update(id,title){
 		var find_up = find(id);
 		find_up.title = title;
 		sync();

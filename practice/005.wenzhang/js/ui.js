@@ -31,6 +31,8 @@
    function get_form_value(el){
       var data = {};
       var input_list = el.children;
+
+    
       
       for (var i = 0; i < input_list.length; i++) {
         var input = input_list[i];

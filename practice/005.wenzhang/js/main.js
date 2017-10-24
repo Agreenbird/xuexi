@@ -30,12 +30,12 @@
 		}
 	}
 
-	 add({title:1,content:"bug",author:"wo"});
- 	 add({title:2,content:"bug",author:"wo"});
-	 add({title:3,content:"bug",author:"wo"});
-    add({title:4,content:"bug",author:"wo"});
-   // updata(34,{title:"测试"});
-   console.log("article_list",article_list);
+	 // add({title:1,content:"bug",author:"wo"});
+ 	//  add({title:2,content:"bug",author:"wo"});
+	 // add({title:3,content:"bug",author:"wo"});
+  //   add({title:4,content:"bug",author:"wo"});
+  //  // updata(34,{title:"测试"});
+  //  console.log("article_list",article_list);
 
 	
 	function add(article){
