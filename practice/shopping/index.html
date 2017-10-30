@@ -2,6 +2,7 @@
 <head>
 	<title>shopping</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style type="text/css">
 	[data-link]{
 		display: inline-block;
@@ -19,7 +20,8 @@
 <div class="nav">
 	
 	<span data-link="home" class="nav-item">首页</span>
-	<span data-link="admin" class="nav-item">后台管理</span>
+	<span data-link="admin_product" class="nav-item">后台管理</span>
+	<span data-link="admin_cat" class="nav-item">分类管理</span>
 
 </div>	
 <div data-page="home" class="page home">
@@ -30,14 +32,14 @@
 	<div></div>
 </div>
 
-<div data-page="admin" class="page admin">
+<div data-page="admin_product" class="page admin">
 	<form id="product-form">
-		<input type="hidden" name="id">
-		<input type="text" name="title">
-		<input type="text" name="price">
+		ID:<input type="text" name="id" readonly="readonly">
+		商品名称：<input type="text" name="title">
+		商品价格：<input type="text" name="price">
 		<button id="btn">提交</button>
 	</form>
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>商品名称</th>
@@ -54,6 +56,32 @@
 	</table>
 
 </div>
+<div data-page="admin_cat">
+	<h1>分类管理</h1>
+	<form id="cat-form">
+		ID: <input type="text" name="id" readonly="readonly">
+		标题： <input type="text" name="title">
+		父级ID：<input type="text" name="parent_id">
+		<button type="submit">提交</button>
+	</form>
+	<br/>
+
+	<table border="1">
+		<thead>
+				<tr>
+					<th>ID</th>
+					<th>标题</th>
+					<th>父级ID</th>
+					<th>操作</th>
+				</tr>
+		</thead>
+		<tbody id="cat-entry">
+
+		</tbody>
+	</table>
+
+
+</div>
 
 <script src="js/storage.js"></script>
 <script src="js/router.js"></script>
@@ -61,6 +89,8 @@
 <script src="js/hot.js"></script>
 <script src="js/new.js" "></script>
 <script src="js/product-ui.js"></script>
+<script src="js/cat.js"></script>
+<script src="js/cat_ui.js"></script>
 
 </body>
 </html>
