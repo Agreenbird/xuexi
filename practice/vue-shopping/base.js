@@ -14,6 +14,10 @@
             Event.$on("finsh",function(){
                 me.input_current = {};
             });
+            Event.$on("product_update",function(data){
+                var product = Object.assign({},data);
+                me.input_current = product;
+            });
         },
         props:['list'],
         methods:{
@@ -44,16 +48,23 @@
             }) ;
             Event.$on("remove",function(id){
                 me.remove(id);
-            })
+            });
+            Event.$on("update",function(data){
+                me.update(data);
+            });
         },
         methods:{
             add_or_update:function(product){
-                console.log(product);
+               
                 if (!product || !product.price || !product.title) {
                     throw "错了";
                 }
                 if (product.id) {
-                    
+                    var update_id = this.find_index(product.id);
+                    var update_product = this.product_list[update_id];
+                    this.product_list[update_id] = Object.assign({},update_product,product);
+                    this.sync();
+                    Event.$emit("finsh");
                 }else{
                     product.id = this.inc();
                     this.product_list.push(product);
@@ -66,6 +77,9 @@
                 var remove_id = this.find_index(id);
                 this.product_list.splice(remove_id,1);
                 this.sync();
+            },
+            update:function(row){
+                Event.$emit('product_update',row);
             },
             find_index:function(id){
                 return this.product_list.findIndex(function(product){

@@ -23,7 +23,7 @@
             <span>商品名称：{{product.title}}</span><br/>
             <span>商品价格：{{product.price}}</span><br/>
             <button @click="trigger('remove',i)">删除</button>
-            <!-- <button @click="update">更改</button> -->
+            <button @click="trigger('update',product)">更改</button>
         </div>
     </div>
 </template>
