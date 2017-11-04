@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>shopping</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
 <div id="app">
-	<div id="admin_product" v-if="current_page === 'admin_product'" >
-		<h1>商品管理</h1>
-			<form @submit.prevent="add_or_update()">
-				<input type="text" name="title" v-model="current_product.title">
-				<input type="text" name="price" v-model="current_product.price">
-				<button type="btn">提交</button>
-			</form>
-			<div v-for="product in product_list">
-				{{product.title}}<br>
-				{{product.price}}
-				<button @click="remove(product.id)">删除</button>
-				<button @click="current_product = product">更改</button>
-				<hr> 
-			</div>
-
-	</div>
-	<div id="admin_cat" v-if="current_page === 'admin_cat'">
-		<h1>分类管理</h1>
-	</div>
-</div>	
-<script src="js/vue.js"></script>
-<script src="js/storage.js"></script>
-<script src="js/base.js"></script>
+    <page-product :list="product_list"></page-product>
+    <page-cat></page-cat>
+</div>
+<template id="tpl-page-product">
+    <div>
+        <h1>商品管理</h1>
+        <form @submit.prevent="trigger('add-or-update',input_current)">
+            <input type="text" v-model="input_current.title">
+            <input type="text" v-model="input_current.price">
+            <button type="btn">提交</button>
+        </form>
+        <div v-for="(product,i) in list">
+            <span>商品名称：{{product.title}}</span><br/>
+            <span>商品价格：{{product.price}}</span><br/>
+            <button @click="trigger('remove',i)">删除</button>
+            <!-- <button @click="update">更改</button> -->
+        </div>
+    </div>
+</template>
+<template id="tpl-page-cat">
+    <h1>分类管理</h1>
+</template>
+ <script src="storage.js"></script>   
+ <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+ <script src="base.js"></script>   
 </body>
 </html>
